@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: rgb(230, 230, 230);
+}
+
+nav {
+  width: 100%;
+  background: dodgerblue;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav > span {
+  margin-left: 30px;
+  margin-right: 30px;
+  font-weight: bold;
+}
+
+nav > a {
+  height: 48px;
+  line-height: 48px;
+  padding-left: 12px;
+  padding-right: 12px;
+  color: white;
+  text-decoration: none;
+}
+
+nav > a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+#ligne-match {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#ligne-match > p {
+  margin: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.carte-personnage {
+  border: black solid 3px;
+  border-radius: 12px;
+  max-width: 300px;
+  width: 40%;
+  color: black;
+  text-decoration: none;
+}
+
+.carte-personnage:hover {
+  border: rgb(200, 100, 0) solid 3px;
+}
+
+.carte-personnage > .image {
+  padding-top: 150%;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.carte-personnage > .description {
+  padding: 8px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.nom {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.acteur {
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+.conteneur-colonnes {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.colonne {
+  width: 50%;
+  max-width: 400px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+table {
+  border: black solid 3px;
+  border-radius: 12px;
+  background: white;
+  border-spacing: 0;
+}
+
+tbody > tr > td, tbody > tr > th {
+  border-top: black solid 2px;
+  padding: 2px 4px;
+}
+
+#th-personnage {
+  width: 100%;
+}
+
+ol {
+  list-style-type: none;
+  padding: 0;
+  border: black solid 3px;
+  border-radius: 12px;
+  background: white;
+}
+
+li {
+  border-bottom: 2px solid black;
+  padding: 4px 8px;
+}
+
+li:last-child {
+  border-bottom: 0;
+}
+
+.gagne {
+  font-weight: bold;
+  color: green;
+}
+
+.perdu {
+  font-weight: bold;
+  color: red;
+}
+
+.details {
+  color: grey;
+}

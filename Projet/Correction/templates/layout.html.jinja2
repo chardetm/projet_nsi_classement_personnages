@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <!-- Mise à l'échelle pour les navigateurs mobiles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Notre CSS -->
+    <link rel="stylesheet" href="{{ chemin_css }}">
+
+    <title>Classement personnages Game of Thrones</title>
+</head>
+<body>
+    <nav>
+        <span>Personnages GoT</span>
+        <a href="/">Match</a>
+        <a href="/classement/">Classement</a>
+    </nav>
+    <main>
+        {% block contenu %}
+        {% endblock %}
+    </main>
+</body>
+</html>

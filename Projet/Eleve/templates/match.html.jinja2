@@ -1,0 +1,30 @@
+{% extends "layout.html.jinja2" %}
+
+
+{% block contenu %}
+
+<h1>Quel est votre personnage préféré ?</h1>
+
+<div id="ligne-match">
+
+    <a class="carte-personnage" href="/vote/{{ id_match_en_cours }}/1/">
+        <div class="image" style="background-image: url('{{ personnage1["url_image"] }}');"></div>
+        <div class="description">
+            <div class="nom">{{ personnage1["nom"] }}</div>
+            <div class="acteur">{{ personnage1["acteur"] }}</div>
+        </div>
+    </a>
+
+    <p>ou</p>
+
+    <a class="carte-personnage" href="/vote/{{ id_match_en_cours }}/2/">
+        <div class="image" style="background-image: url('{{ personnage2["url_image"] }}');"></div>
+        <div class="description">
+            <div class="nom">{{ personnage2["nom"] }}</div>
+            <div class="acteur">{{ personnage2["acteur"] }}</div>
+        </div>
+    </a>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Ma liste interactive</title>
+</head>
+<body>
+    <h1>La liste de {{ auteur_liste }}</h1>
+    <h2>Ajouter un élément</h2>
+    <form action="/liste_interactive/" method="post">
+        <input type="text" name="element">
+        <button type="submit">Ajouter</button>
+    </form>
+    <h2>Contenu</h2>
+    <ul>
+    {% for element in contenu_liste %}
+        <li>{{ element }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

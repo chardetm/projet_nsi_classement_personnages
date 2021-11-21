@@ -1,0 +1,46 @@
+{% extends "layout.html.jinja2" %}
+
+
+{% block contenu %}
+
+<div class="conteneur-colonnes">
+    <div class="colonne">
+        <h2>Classement</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col" id="th-personnage">Personnage</th>
+                    <th scope="col">Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for personnage in infos_personnages %}
+                    <tr>
+                        <th scope="row">{{ loop.index }}</th>
+                        <td>{{ personnage["nom"] }}</td>
+                        <td>{{ personnage["score"]|int }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="colonne">
+        <h2>Derniers matchs</h2>
+        <ol class="list-group">
+            {% for match in infos_matchs %}
+                <li>
+                    {{ match["nom_gagnant"] }}
+                    <span class="gagne"> +{{ (match["nouveau_score_gagnant"]-match["ancien_score_gagnant"])|int }}</span>
+                    <span class="details">({{ match["ancien_score_gagnant"]|int }} → {{ match["nouveau_score_gagnant"]|int }})</span>
+                    <br>
+                    {{ match["nom_perdant"] }}
+                    <span class="perdu"> -{{ (match["ancien_score_perdant"] - match["nouveau_score_perdant"])|int }}</span>
+                    <span class="details">({{ match["ancien_score_perdant"]|int }} → {{ match["nouveau_score_perdant"]|int }})</span>
+                </li>
+            {% endfor %}
+        </ol>
+    </div>
+</div>
+
+{% endblock %}
